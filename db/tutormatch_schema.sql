@@ -12,7 +12,7 @@ time_avail INTEGER (10),
 location VARCHAR (30),
 phone_number VARCHAR(15),
 email VARCHAR (30),
-tiime_created TIMESTAMP,
+time_created TIMESTAMP,
 PRIMARY KEY (id)
 );
 

@@ -1,7 +1,23 @@
 module.exports = function(sequelize, DataTypes) {
-  var Author = sequelize.define("Author", {
+  var Tutor = sequelize.define("Tutor", {
     // Giving the Author model a name of type STRING
-    name: DataTypes.STRING
+    tutor_name: DataTypes.STRING,
+    subject: DataTypes.STRING,
+    dates_avail:DataTypes.DATE,
+    time_avail: DataTypes.TIME,
+    location: DataTypes.STRING,
+    phone_number: DataTypes.STRING,
+    email: DataTypes.STRING,
+    time_created: DataTypes.TIMESTAMP
+  },
+  {
+    student_name: DataTypes.STRING,
+    subject: DataTypes.STRING,
+    location: DataTypes.STRING,
+    phone_number: DataTypes.STRING,
+    email: DataTypes.STRING,
+    time_created: DataTypes.TIMESTAMP
+
   },
     // Here we'll pass a second "classMethods" object into the define method
     // This is for any additional configuration we want to give our models
@@ -18,6 +34,6 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   );
-  return Author;
+  return Tutor;
 };
 
