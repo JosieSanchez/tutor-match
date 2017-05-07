@@ -1,6 +1,6 @@
-INSERT INTO tutors (tutor_name, subject, dates_avail, time_avail, email) VALUES ('Ahmed', 'Javascript', 'Monday', 09, 'safwat17@yahoo.com' ),
- ('Mark', 'HTML', 'Wednesday', 12, 'markkbrown1@gmail.com' ),
- ('Josie', 'Nodejs', 'Wednesday', 12, 'josie.sanchez5829@gmail.com' );
+INSERT INTO tutors (tutor_name, subject, dates_avail, time_avail, email) VALUES ('Ahmed', 'Javascript', '2017-05-08', 09, 'safwat17@yahoo.com' ),
+ ('Mark', 'HTML', '2017-05-10', 12, 'markkbrown1@gmail.com' ),
+ ('Josie', 'Nodejs', '2017-05-12', 12, 'josie.sanchez5829@gmail.com' );
 -- INSERT INTO tutors (tutor_name, subject, dates_avail, time_avail, email) VALUES ('Josie' josie.sanchez5829@gmail.com);
 -- INSERT INTO tutors (tutor_name, subject, dates_avail, time_avail, email) VALUES ('Mark');
 -- INSERT INTO tutors (tutor_name, subject, dates_avail, time_avail, email) VALUES ('Paul');
