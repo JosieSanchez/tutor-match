@@ -10,15 +10,7 @@ module.exports = function(sequelize, DataTypes) {
     email: DataTypes.STRING,
     time_created: DataTypes.TIMESTAMP
   },
-  {
-    student_name: DataTypes.STRING,
-    subject: DataTypes.STRING,
-    location: DataTypes.STRING,
-    phone_number: DataTypes.STRING,
-    email: DataTypes.STRING,
-    time_created: DataTypes.TIMESTAMP
-
-  },
+  
     // Here we'll pass a second "classMethods" object into the define method
     // This is for any additional configuration we want to give our models
     {
@@ -27,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
         associate: function(models) {
           // Associating Author with Posts
           // When an Author is deleted, also delete any associated Posts
-          Author.hasMany(models.Post, {
+          Tutor.belongsTo(models.Student, {
             onDelete: "cascade"
           });
         }
