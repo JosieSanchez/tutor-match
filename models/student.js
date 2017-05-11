@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     location: DataTypes.STRING,
     phone_number: DataTypes.STRING,
     email: DataTypes.STRING,
-    time_created: DataTypes.TIMESTAMP
+    createdAt: DataTypes.TIMESTAMP
 
   },
   //   title: {

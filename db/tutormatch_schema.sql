@@ -1,6 +1,6 @@
 -- CREATE DATABASE tutormatch_db;
 
-USE tutormatch_db;
+USE g5sj7w7vvthvq19r;
 
 CREATE TABLE tutors
 (
@@ -12,7 +12,7 @@ time_avail TIME,
 location VARCHAR (30),
 phone_number VARCHAR(15),
 email VARCHAR (30),
-time_created TIMESTAMP,
+createdAt TIMESTAMP NOT NULL,
 PRIMARY KEY (id)
 );
 
@@ -24,6 +24,6 @@ subject TEXT (100),
 location VARCHAR (30),
 phone_number VARCHAR (15),
 email VARCHAR (30),
-time_created TIMESTAMP,
+createdAt TIMESTAMP NOT NULL,
 PRIMARY KEY (id)
 );

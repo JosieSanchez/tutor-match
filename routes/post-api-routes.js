@@ -16,29 +16,29 @@ module.exports = function(app) {
   app.get("/api/posts", function(req, res) {
     var query = {};
     if (req.query.tutor_id) {
-      query.AuthorId = req.query.tutor_id;
+      query.TutorId = req.query.tutor_id;
     }
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Author
     db.Post.findAll({
       where: query,
-      include: [db.Author]
+      include: [db.Tutor]
     }).then(function(dbPost) {
       res.json(dbPost);
     });
   });
 
   // Get rotue for retrieving a single post
-  app.get("/api/posts/:id", function(req, res) {
+  app.get("/api/posts/:subject", function(req, res) {
     // Here we add an "include" property to our options in our findOne query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Author
     db.Post.findOne({
       where: {
-        id: req.params.id
+        subject: req.params.subject
       },
-      include: [db.Author]
+      include: [db.Tutor]
     }).then(function(dbPost) {
       res.json(dbPost);
     });

@@ -1,44 +1,44 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  app.get("/api/authors", function(req, res) {
+  app.get("/api/tutors", function(req, res) {
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Post
-    db.Author.findAll({
+    db.Tutor.findAll({
       include: [db.Post]
-    }).then(function(dbAuthor) {
-      res.json(dbAuthor);
+    }).then(function(dbTutor) {
+      res.json(dbTutor);
     });
   });
 
-  app.get("/api/authors/:id", function(req, res) {
+  app.get("/api/tutors/:subject", function(req, res) {
     // Here we add an "include" property to our options in our findOne query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Post
-    db.Author.findOne({
+    db.Tutor.findOne({
       where: {
-        id: req.params.id
+        subject: req.params.subject
       },
       include: [db.Post]
-    }).then(function(dbAuthor) {
-      res.json(dbAuthor);
+    }).then(function(dbTutor) {
+      res.json(dbTutor);
     });
   });
 
-  app.post("/api/authors", function(req, res) {
-    db.Author.create(req.body).then(function(dbAuthor) {
-      res.json(dbAuthor);
+  app.post("/api/tutors", function(req, res) {
+    db.Tutor.create(req.body).then(function(dbTutor) {
+      res.json(dbTutor);
     });
   });
 
-  app.delete("/api/authors/:id", function(req, res) {
-    db.Author.destroy({
+  app.delete("/api/tutors/:subject", function(req, res) {
+    db.Tutor.destroy({
       where: {
-        id: req.params.id
+        subject: req.params.subject
       }
-    }).then(function(dbAuthor) {
-      res.json(dbAuthor);
+    }).then(function(dbTutor) {
+      res.json(dbTutor);
     });
   });
 

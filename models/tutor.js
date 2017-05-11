@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Tutor = sequelize.define("Tutor", {
-    // Giving the Author model a name of type STRING
+    // Giving the Tutor model a name of type STRING
     tutor_name: DataTypes.STRING,
     subject: DataTypes.STRING,
     dates_avail:DataTypes.DATE,
@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
     location: DataTypes.STRING,
     phone_number: DataTypes.STRING,
     email: DataTypes.STRING,
-    time_created: DataTypes.TIMESTAMP
+    createAt: DataTypes.TIMESTAMP
   },
   
     // Here we'll pass a second "classMethods" object into the define method

@@ -3,7 +3,3 @@
 
 
 
-
-$("p").click(function(){
-    alert("The  was clicked.");
-});
