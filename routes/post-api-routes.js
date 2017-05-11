@@ -43,7 +43,7 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
-
+//=========================USER======================================//
   // POST route for saving a new post
   app.post("/api/posts", function(req, res) {
     db.Post.create(req.body).then(function(dbPost) {
