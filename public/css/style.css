@@ -1,3 +1,60 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+
+}
+
+/*video experiments */
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+    .fullscreen-bg {
+        background: url('https://www.youtube.com/embed/Fl_mU_oL4xI') center center / cover no-repeat;
+    }
+
+    .fullscreen-bg__video {
+        display: none;
+    }
+}
+
+
+
+
+img {
+
+width:100%;
+
+}
+
 .container {
     max-width:auto
     margin-top: 20px;
@@ -10,18 +67,28 @@
     width:60% /* value of your choice which suits your alignment */
 }
   
+/* jumbotron */
+
+.jumbotron {
+  width:100%;
+
+
+}
+
 #mySelect {
 display:block;
     margin-left:auto;
     margin-right:auto;
 }
 
-}
+
 
 
 ul.nav.nav-pills {
     text-align: right;
 }
+
+
 
 .nav-pills>li {
     float: none;
@@ -42,9 +109,10 @@ H1 {
 }
 
 
-.footer  {
-
-text-align: center;
+footer  {
+  background-color: #F5F5F5;
+  height:100%;
+  text-align: center;
 
 }
 
@@ -67,7 +135,6 @@ text-align: center;
 
     }
 
-/* css from tutor.css */
 
 
 
@@ -75,7 +142,7 @@ text-align: center;
 .navbar {
     position: relative;
     min-height: 80px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     background-color: #000000;
     border: 1px solid transparent;
 
@@ -141,3 +208,172 @@ p {
     margin: 0 0 10.5px;
     text-align: center;
 }
+
+
+/* header */
+
+header {
+  text-align: center;
+  background: #18BC9C;
+  color: white;
+}
+header .container {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+header img {
+  display: block;
+  margin: 0 auto 20px;
+}
+header .intro-text .name {
+  display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+}
+header .intro-text .skills {
+  font-size: 1.25em;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  header .container {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+  header .intro-text .name {
+    font-size: 4.75em;
+  }
+  header .intro-text .skills {
+    font-size: 1.75em;
+  }
+
+
+/* Carousel base class */
+
+
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  }
+    .carousel-caption .btn {
+      margin-top: 10px;
+  }
+
+
+
+
+.carousel.fade {
+    opacity: 1;
+}
+.carousel.fade .item {
+    -moz-transition: opacity ease-in-out .7s;
+    -o-transition: opacity ease-in-out .7s;
+    -webkit-transition: opacity ease-in-out .7s;
+    transition: opacity ease-in-out .7s;
+    left: 0 !important;
+    opacity: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    display: block !important;
+    z-index: 1;
+}
+.carousel.fade .item:first-child {
+    top: auto;
+    position: relative;
+}
+.carousel.fade .item.active {
+    opacity: 1;
+    -moz-transition: opacity ease-in-out .7s;
+    -o-transition: opacity ease-in-out .7s;
+    -webkit-transition: opacity ease-in-out .7s;
+    transition: opacity ease-in-out .7s;
+    z-index: 2;
+}
+.carousel-control {
+    z-index: 2;
+}
+
+
+
+
+
+
+/* footer */
+
+p.copyright text-muted {
+    color: #000000;
+    text-align: center;
+}
+
+
+p {
+    margin: 0 0 10.5px;
+    text-align: center;
+
+
+element.style {
+    background-color: black;
+    text-align: center;
+  }
+
+.row {
+    background-color: #cccccc;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+footer {
+  padding: 50px 0 65px;
+  backround-color: #000000;
+}
+footer .list-inline {
+  margin: 0;
+  padding: 0;
+}
+footer .copyright {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 0;
+
