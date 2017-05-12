@@ -50,11 +50,7 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    createdAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      len: [1]
-    }
+   
   },
   
     // Here we'll pass a second "classMethods" object into the define method

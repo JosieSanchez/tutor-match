@@ -28,11 +28,7 @@ validate: {
   len: [1]
 }
 },
-createdAt: {
-type: DataTypes.DATETIME,
-allowNull: false,
-len: [1]
-}
+
 },
 {
 // We're saying that we want our Author to have Posts
